@@ -6,7 +6,7 @@
     Connection conn=null;
     try{
         Context init = new InitialContext();
-        DataSource ds = (DataSource) init.lookup("java:comp/env/jdbc/devDB");
+        DataSource ds = (DataSource)init.lookup("java:comp/env/jdbc/devDB");
         conn = ds.getConnection();
         out.println("Success!!!");
     }catch(Exception e){
