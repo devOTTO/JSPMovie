@@ -4,21 +4,22 @@ import java.sql.Date;
 
 public class Movie implements java.io.Serializable {
 
-    String movName;
     int movId;
+    String movName;
     Date movDate;
     int movRate;
     int dirId;
 
     public Movie() {
-        this("", -1, null, -1, -1);
+        this(-1,"", null, -1, -1);
     }
 
-    public Movie(String movName, int movId, Date movDate, int movRate) {
-        this.movName = movName;
+    public Movie( int movId, String movName, Date movDate, int movRate, int dirId) {
         this.movId = movId;
+        this.movName = movName;
         this.movDate = movDate;
         this.movRate = movRate;
+        this.dirId = dirId;
     }
 
     public String getMovName() {
